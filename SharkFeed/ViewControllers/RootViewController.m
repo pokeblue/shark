@@ -25,5 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)swipe:(id)sender {
+    NSLog(@"--swipe");
+}
+
 
 @end
