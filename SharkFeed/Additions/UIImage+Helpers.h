@@ -6,8 +6,13 @@
 //  Copyright © 2018 mike oh. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface UIImage_Helpers : NSObject
+@interface UIImage (Helpers)
+
+/**
+ Load image from URL and callback to update image.
+ */
++ (void)loadFromURL:(NSString*)urlString completion:(void (^)(UIImage *image, NSString *urlString))completion;
 
 @end

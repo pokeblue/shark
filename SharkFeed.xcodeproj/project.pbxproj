@@ -8,13 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		2A00A44D20294EE200A631BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A44C20294EE200A631BA /* AppDelegate.m */; };
-		2A00A45020294EE200A631BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A44F20294EE200A631BA /* ViewController.m */; };
+		2A00A45020294EE200A631BA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A44F20294EE200A631BA /* RootViewController.m */; };
 		2A00A45320294EE200A631BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00A45120294EE200A631BA /* Main.storyboard */; };
 		2A00A45620294EE200A631BA /* SharkFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A45420294EE200A631BA /* SharkFeed.xcdatamodeld */; };
 		2A00A45820294EE200A631BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A00A45720294EE200A631BA /* Assets.xcassets */; };
 		2A00A45B20294EE200A631BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A00A45920294EE200A631BA /* LaunchScreen.storyboard */; };
 		2A00A45E20294EE200A631BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A45D20294EE200A631BA /* main.m */; };
 		2A00A46820294EE200A631BA /* SharkFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A46720294EE200A631BA /* SharkFeedTests.m */; };
+		2A00A478202954B900A631BA /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A477202954B900A631BA /* FeedViewController.m */; };
+		2A00A479202954B900A631BA /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A477202954B900A631BA /* FeedViewController.m */; };
+		2A00A47C202967D500A631BA /* FeedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A47B202967D500A631BA /* FeedDataSource.m */; };
+		2A00A47D202967D500A631BA /* FeedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A47B202967D500A631BA /* FeedDataSource.m */; };
+		2A00A480202968A400A631BA /* ApiFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A47F202968A400A631BA /* ApiFetcher.m */; };
+		2A00A481202968A400A631BA /* ApiFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A00A47F202968A400A631BA /* ApiFetcher.m */; };
+		2AC047B0202A127B00DD2526 /* UIImage+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC047AF202A127B00DD2526 /* UIImage+Helpers.m */; };
+		2AC047B4202A188100DD2526 /* FeedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC047B3202A188100DD2526 /* FeedCollectionViewCell.m */; };
+		2AC047B7202A208B00DD2526 /* LightboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC047B6202A208B00DD2526 /* LightboxViewController.m */; };
+		2AC047BA202A2E9F00DD2526 /* RefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC047B9202A2E9F00DD2526 /* RefreshHeaderView.m */; };
+		2AD9FB3A202B3BBB0044E201 /* ViewControllerAnimatedTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9FB39202B3BBB0044E201 /* ViewControllerAnimatedTransition.m */; };
+		2AD9FB3D202B53940044E201 /* ImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD9FB3C202B53940044E201 /* ImageViewer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +43,8 @@
 		2A00A44820294EE200A631BA /* SharkFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharkFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A00A44B20294EE200A631BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2A00A44C20294EE200A631BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2A00A44E20294EE200A631BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2A00A44F20294EE200A631BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2A00A44E20294EE200A631BA /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		2A00A44F20294EE200A631BA /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2A00A45220294EE200A631BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A00A45520294EE200A631BA /* SharkFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SharkFeed.xcdatamodel; sourceTree = "<group>"; };
 		2A00A45720294EE200A631BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +54,24 @@
 		2A00A46320294EE200A631BA /* SharkFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharkFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A00A46720294EE200A631BA /* SharkFeedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharkFeedTests.m; sourceTree = "<group>"; };
 		2A00A46920294EE200A631BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A00A476202954B900A631BA /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		2A00A477202954B900A631BA /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		2A00A47A202967D500A631BA /* FeedDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedDataSource.h; sourceTree = "<group>"; };
+		2A00A47B202967D500A631BA /* FeedDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedDataSource.m; sourceTree = "<group>"; };
+		2A00A47E202968A400A631BA /* ApiFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiFetcher.h; sourceTree = "<group>"; };
+		2A00A47F202968A400A631BA /* ApiFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiFetcher.m; sourceTree = "<group>"; };
+		2AC047AE202A127B00DD2526 /* UIImage+Helpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helpers.h"; sourceTree = "<group>"; };
+		2AC047AF202A127B00DD2526 /* UIImage+Helpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Helpers.m"; sourceTree = "<group>"; };
+		2AC047B2202A188100DD2526 /* FeedCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedCollectionViewCell.h; sourceTree = "<group>"; };
+		2AC047B3202A188100DD2526 /* FeedCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedCollectionViewCell.m; sourceTree = "<group>"; };
+		2AC047B5202A208B00DD2526 /* LightboxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightboxViewController.h; sourceTree = "<group>"; };
+		2AC047B6202A208B00DD2526 /* LightboxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightboxViewController.m; sourceTree = "<group>"; };
+		2AC047B8202A2E9F00DD2526 /* RefreshHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshHeaderView.h; sourceTree = "<group>"; };
+		2AC047B9202A2E9F00DD2526 /* RefreshHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefreshHeaderView.m; sourceTree = "<group>"; };
+		2AD9FB38202B3BBB0044E201 /* ViewControllerAnimatedTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerAnimatedTransition.h; sourceTree = "<group>"; };
+		2AD9FB39202B3BBB0044E201 /* ViewControllerAnimatedTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerAnimatedTransition.m; sourceTree = "<group>"; };
+		2AD9FB3B202B53940044E201 /* ImageViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewer.h; sourceTree = "<group>"; };
+		2AD9FB3C202B53940044E201 /* ImageViewer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,16 +113,17 @@
 		2A00A44A20294EE200A631BA /* SharkFeed */ = {
 			isa = PBXGroup;
 			children = (
+				2AC047B1202A185900DD2526 /* Views */,
+				2AC047AD202A121E00DD2526 /* Additions */,
+				2A00A47520294F0600A631BA /* Helpers */,
+				2A00A47420294EFF00A631BA /* Storyboards */,
+				2A00A47320294EF700A631BA /* ViewControllers */,
+				2A00A47220294EE800A631BA /* Models */,
 				2A00A44B20294EE200A631BA /* AppDelegate.h */,
 				2A00A44C20294EE200A631BA /* AppDelegate.m */,
-				2A00A44E20294EE200A631BA /* ViewController.h */,
-				2A00A44F20294EE200A631BA /* ViewController.m */,
-				2A00A45120294EE200A631BA /* Main.storyboard */,
 				2A00A45720294EE200A631BA /* Assets.xcassets */,
-				2A00A45920294EE200A631BA /* LaunchScreen.storyboard */,
 				2A00A45C20294EE200A631BA /* Info.plist */,
 				2A00A45D20294EE200A631BA /* main.m */,
-				2A00A45420294EE200A631BA /* SharkFeed.xcdatamodeld */,
 			);
 			path = SharkFeed;
 			sourceTree = "<group>";
@@ -104,6 +135,71 @@
 				2A00A46920294EE200A631BA /* Info.plist */,
 			);
 			path = SharkFeedTests;
+			sourceTree = "<group>";
+		};
+		2A00A47220294EE800A631BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2A00A45420294EE200A631BA /* SharkFeed.xcdatamodeld */,
+				2A00A47A202967D500A631BA /* FeedDataSource.h */,
+				2A00A47B202967D500A631BA /* FeedDataSource.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2A00A47320294EF700A631BA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A00A44E20294EE200A631BA /* RootViewController.h */,
+				2A00A44F20294EE200A631BA /* RootViewController.m */,
+				2A00A476202954B900A631BA /* FeedViewController.h */,
+				2A00A477202954B900A631BA /* FeedViewController.m */,
+				2AC047B5202A208B00DD2526 /* LightboxViewController.h */,
+				2AC047B6202A208B00DD2526 /* LightboxViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2A00A47420294EFF00A631BA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2A00A45920294EE200A631BA /* LaunchScreen.storyboard */,
+				2A00A45120294EE200A631BA /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2A00A47520294F0600A631BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2A00A47E202968A400A631BA /* ApiFetcher.h */,
+				2A00A47F202968A400A631BA /* ApiFetcher.m */,
+				2AD9FB38202B3BBB0044E201 /* ViewControllerAnimatedTransition.h */,
+				2AD9FB39202B3BBB0044E201 /* ViewControllerAnimatedTransition.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2AC047AD202A121E00DD2526 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				2AC047AE202A127B00DD2526 /* UIImage+Helpers.h */,
+				2AC047AF202A127B00DD2526 /* UIImage+Helpers.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		2AC047B1202A185900DD2526 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AC047B2202A188100DD2526 /* FeedCollectionViewCell.h */,
+				2AC047B3202A188100DD2526 /* FeedCollectionViewCell.m */,
+				2AC047B8202A2E9F00DD2526 /* RefreshHeaderView.h */,
+				2AC047B9202A2E9F00DD2526 /* RefreshHeaderView.m */,
+				2AD9FB3B202B53940044E201 /* ImageViewer.h */,
+				2AD9FB3C202B53940044E201 /* ImageViewer.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +305,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A00A45620294EE200A631BA /* SharkFeed.xcdatamodeld in Sources */,
-				2A00A45020294EE200A631BA /* ViewController.m in Sources */,
+				2A00A478202954B900A631BA /* FeedViewController.m in Sources */,
+				2A00A45020294EE200A631BA /* RootViewController.m in Sources */,
+				2AC047BA202A2E9F00DD2526 /* RefreshHeaderView.m in Sources */,
+				2AC047B0202A127B00DD2526 /* UIImage+Helpers.m in Sources */,
 				2A00A45E20294EE200A631BA /* main.m in Sources */,
+				2AC047B7202A208B00DD2526 /* LightboxViewController.m in Sources */,
+				2A00A47C202967D500A631BA /* FeedDataSource.m in Sources */,
+				2AC047B4202A188100DD2526 /* FeedCollectionViewCell.m in Sources */,
+				2A00A480202968A400A631BA /* ApiFetcher.m in Sources */,
+				2AD9FB3A202B3BBB0044E201 /* ViewControllerAnimatedTransition.m in Sources */,
 				2A00A44D20294EE200A631BA /* AppDelegate.m in Sources */,
+				2AD9FB3D202B53940044E201 /* ImageViewer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A00A479202954B900A631BA /* FeedViewController.m in Sources */,
+				2A00A47D202967D500A631BA /* FeedDataSource.m in Sources */,
+				2A00A481202968A400A631BA /* ApiFetcher.m in Sources */,
 				2A00A46820294EE200A631BA /* SharkFeedTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +472,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J68V5NEH9;
 				INFOPLIST_FILE = SharkFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikeoh.SharkFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,6 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3J68V5NEH9;
 				INFOPLIST_FILE = SharkFeed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mikeoh.SharkFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -6,20 +6,20 @@
 //  Copyright © 2018 mike oh. All rights reserved.
 //
 
-#import "ImageDownloader.h"
+#import "ApiFetcher.h"
 
 static NSString * const kApiKey = @"949e98778755d1982f537d56236bbb42";
 static NSString * const kAPIUrl = @"https://api.flickr.com/";
 static NSString * const kAPIEndPoint = @"services/rest/";
 
-@interface ImageDownloader()
+@interface ApiFetcher()
 
 @property(nonatomic, strong) NSURLSession *imageSession;
 @property(nonatomic, strong) NSOperationQueue *netOperationQueue;
 
 @end
 
-@implementation ImageDownloader
+@implementation ApiFetcher
 - (id)init {
     self = [super init];
     if (self) {
@@ -46,22 +46,10 @@ static NSString * const kAPIEndPoint = @"services/rest/";
     };
     
     NSURL *url = [self parameters:@"flickr.photos.search" withDictionary:dic];
+    __weak typeof(self) weakSelf = self;
     
     NSURLSessionTask *task = [_imageSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
-            return failure(error);
-        }
-        if (response) {
-            //More error handling can be done such as there are no JSON.
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                NSDictionary *arr = [self parseData:data];
-                if (arr) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        success(arr);
-                    });
-                }
-            });
-        }
+        [weakSelf responseHandler:data response:response error:error success:success failure:failure];
     }];
     
     [task resume];
@@ -73,16 +61,10 @@ static NSString * const kAPIEndPoint = @"services/rest/";
                            failure:(void (^)(NSError *error))failure {
     NSDictionary *dic = @{@"photo_id":photoId};
     NSURL *url = [self parameters:@"flickr.photos.getInfo" withDictionary:dic];
+    __weak typeof(self) weakSelf = self;
     
     NSURLSessionTask *task = [_imageSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
-            return failure(error);
-        }
-        if (response) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
-            });
-        }
+        [weakSelf responseHandler:data response:response error:error success:success failure:failure];
     }];
     
     [task resume];
@@ -115,6 +97,35 @@ static NSString * const kAPIEndPoint = @"services/rest/";
     
     components.queryItems = array;
     return components.URL;
+}
+
+- (void)responseHandler:(NSData *)data response:(NSURLResponse *)response error:(NSError *)error success:(void (^)(NSDictionary *dic))success
+                failure:(void (^)(NSError *error))failure {
+    
+    if (error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            failure(error);
+        });
+        return;
+    }
+    if (response) {
+        //More error handling can be done such as there are no JSON.
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSDictionary *arr = [weakSelf parseData:data];
+            if (arr) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    success(arr);
+                });
+            } else {
+                // Custom error used in case the return object is not kind of nsdictionary.
+                NSError *error = [NSError errorWithDomain:kAPIUrl code:-1 userInfo:nil];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    failure(error);
+                });
+            }
+        });
+    }
 }
 
 - (NSDictionary *)parseData:(NSData *)data {

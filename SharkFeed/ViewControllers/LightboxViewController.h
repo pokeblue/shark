@@ -10,4 +10,14 @@
 
 @interface LightboxViewController : UIViewController
 
+/**
+ The item date to display.
+ */
+@property (nonatomic) NSDictionary* item;
+
+/**
+ A small image to display before a full image is downloaded.
+ */
+@property (nonatomic) UIImage* preloadedImage;
+
 @end

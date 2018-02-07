@@ -10,4 +10,11 @@
 
 @interface FeedCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+/**
+ The item date to display.
+ */
+@property (nonatomic) NSDictionary *item;
+
 @end

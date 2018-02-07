@@ -6,8 +6,18 @@
 //  Copyright © 2018 mike oh. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface ViewControllerAnimatedTransition : NSObject
+@interface ViewControllerAnimatedTransition : NSObject<UIViewControllerAnimatedTransitioning>
+
+/**
+ Flag for presenting or dismissing.
+ */
+@property (nonatomic) BOOL reverse;
+
+/**
+ Starting animation position.
+ */
+@property (nonatomic, assign) CGRect frame;
 
 @end

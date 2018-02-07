@@ -6,8 +6,10 @@
 //  Copyright © 2018 mike oh. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface ImageViewer : NSObject
+@interface ImageViewer : UIView
+
+@property(nonatomic) UIImage *image;
 
 @end
